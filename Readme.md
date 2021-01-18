@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Victoria Petruschenko](https://up.htmlacademy.ru/htmlcss/30/user/1620087).
-* Наставник: `Неизвестно`.
+* Наставник: `Константин Антонов` (https://htmlacademy.ru/profile/rawle51).
 
 ---
 
