@@ -1,0 +1,304 @@
+/* Variables */
+
+:root {
+  --basic-black: #000000;
+  --basic-extra-dark: #333333;
+  --basic-dark: #EEEEEE;
+  --basic-neutral: #F2F2F2;
+  --basic-hover-neutral: #EBEBEB;
+  --basic-active-border: #E5E5E5;
+  --basic-white: #ffffff;
+  --footer-fill: rgba(255, 255, 255, 0.9);
+
+  --special-extra-dark: #A9A9A9;
+  --special-rating-text: #666666;
+  --special-active-black: rgba(0,0,0,0.3);
+  --special-state-gray: #cacaca;
+  --special-active-white: rgba(255, 255, 255, 0.3);
+  --special-blue: #81B3D2;
+  --special-hover-blue: #669EC0;
+  --special-active-blue: #5496BD;
+  --special-brown: #766357;
+  --special-hover-brown: #604E43;
+  --special-active-brown: #503E33;
+  --special-for-disabled: #6A6A6A;
+  --special-light-gray: #ABABAB;
+  --special-light-shadow: rgba(171,171,171, 0.3);
+  --special-logo: #231F20;
+  --special-active-logo: #BDBBBC;
+}
+
+/* Global */
+
+.page-body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--basic-extra-dark);
+  text-transform: uppercase;
+  background-color: var(--basic-neutral);
+}
+
+.main-container {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: var(--basic-white);
+}
+/* Header */
+
+.main-navigation {
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--basic-black);
+}
+
+.site-navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-navigation a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--basic-black);
+}
+
+.site-navigation a:hover {
+  color: var(--special-blue);
+}
+
+.site-navigation a:active {
+  color: var(--special-active-black);
+}
+
+.site-navigation a:not([href]) {
+  color: var(--special-brown);
+}
+
+.main-logo {
+  margin: 0;
+  padding: 0;
+  background-color: var(--special-brown);
+  background-image: url("../img/bg.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.main-title-sedona {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-black);
+  text-align: center;
+}
+
+.main-subtitle {
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--basic-extra-dark);
+  text-align: center;
+}
+
+.main-feature-item {
+  margin: 0;
+  padding: 0;
+  color: var(--basic-white);
+  background-color: var(--special-blue);
+}
+
+.main-feature-title {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.main-feature-image-right {
+  width: 800px;
+  margin: 0;
+  height: 256px;
+  background-color: var(--basic-extra-dark);
+  background-image: url("../img/town.jpg");
+  background-repeat: no-repeat;
+}
+
+.local-features-list {
+  margin: 0;
+  list-style: none;
+}
+
+.local-feature-title {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.local-feature-house {
+  background-image: url("../img/icon-house.svg");
+  background-size: 75px 72px;
+  background-repeat: no-repeat;
+}
+
+
+.local-feature-food {
+  background-image: url("../img/icon-food.svg");
+  background-size: 75px 70px;
+  background-repeat: no-repeat;
+}
+
+.local-feature-gift {
+  background-image: url("../img/icon-gift.svg");
+  background-size: 64px 77px;
+  background-repeat: no-repeat;
+}
+
+.main-feature-image-left {
+  width: 800px;
+  height: 256px;
+  background-color: var(--basic-extra-dark);
+  background-image: url("../img/bridge.jpg");
+  background-repeat: no-repeat;
+}
+
+.main-features-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: var(--basic-dark);
+}
+
+.main-feature-inline-item {
+  margin: 0;
+  padding: 0;
+  background-color: var(--basic-dark);
+}
+
+.main-feature-caption {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+}
+
+.search-hotel-title {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 24px;
+  color: var(--basic-black);
+}
+
+.search-hotel-subtitle {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.search-hotel-button {
+  text-decoration: none;
+  color: var(--basic-white);
+  background-color: var(--special-brown);
+}
+
+.search-hotel-button:hover {
+  background-color: var(--special-hover-brown);
+}
+
+.search-hotel-button:active {
+  color: var(--special-active-white);
+  background-color: var(--special-active-brown);
+}
+
+/* Footer */
+
+.main-footer {
+  background-color: var(--footer-fill);
+}
+
+.footer-tag {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-black);
+}
+
+.footer-phone {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-black);
+}
+
+.footer-phone-link {
+  text-decoration: none;
+  color: var(--basic-black);
+}
+
+.footer-social-list {
+  list-style: none;
+}
+
+.footer-social-item {
+  margin: 5px;
+  width: 46px;
+  height: 48px;
+  background-color: var(--special-blue);
+}
+
+.footer-social-item:hover {
+  background-color: var(--special-hover-blue);
+}
+
+.footer-social-item:active {
+  background-color: var(--special-active-blue);
+}
+
+.footer-social-item:active .social-svg {
+  fill: var(--special-active-white);
+}
+
+.social-svg {
+  fill: var(--basic-white);
+  width: 17px;
+  height: 17px;
+}
+
+.footer-copyright {
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--basic-black);
+}
+
+.footer-copyright-link:hover .copyright-svg {
+  fill: var(--special-blue);
+}
+
+.footer-copyright-link:active .copyright-svg {
+  fill: var(--special-active-logo);
+}
+
+
+.copyright-svg {
+  width: 115px;
+  height: 41px;
+  fill: var(--basic-black);
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/PTSans.woff") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/PTSans-Bold.woff") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
