@@ -291,14 +291,16 @@
 
 @font-face {
   font-family: "PT Sans";
-  src: url("../fonts/PTSans.woff") format("truetype");
+  src: url("../fonts/PTSans.woff") format("woff"),
+    url("../fonts/PTSans.woff2") format("woff2");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "PT Sans";
-  src: url("../fonts/PTSans-Bold.woff") format("truetype");
+  src: url("../fonts/PTSans-Bold.woff") format("'woff"),
+    url("../fonts/PTSans-Bold.woff2") format("'woff2");
   font-style: normal;
   font-weight: bold;
 }
