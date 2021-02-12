@@ -26,9 +26,19 @@
   --special-light-shadow: rgba(171,171,171, 0.3);
   --special-logo: #231F20;
   --special-active-logo: #BDBBBC;
+  --special-shadow-color: rgba(0, 1, 1, 0.2);
 }
 
 /* Fonts */
+
+@font-face {
+  font-family: "PT Sans";
+  src: local("PT Sans"),
+       url("../fonts/PTSans.woff") format("woff2"),
+       url("../fonts/PTSans.woff2") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
 
 @font-face {
   font-family: "PT Sans";
@@ -40,15 +50,28 @@
 
 @font-face {
   font-family: "PT Sans";
-  src: url("../fonts/PTSans-Bold.woff") format("'woff"),
-    url("../fonts/PTSans-Bold.woff2") format("'woff2");
+  src: url("../fonts/PTSans-Bold.woff") format("woff"),
+    url("../fonts/PTSans-Bold.woff2") format("woff2");
   font-style: normal;
   font-weight: bold;
 }
 
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/PTSans-Bold.woff") format("woff"),
+    url("../fonts/PTSans-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+
 /* Global */
 
+.page {
+  height: 100%;
+}
+
 .page-body {
+  height: 100%;
   min-width: 1200px;
   margin: 0;
   padding: 0;
@@ -61,17 +84,33 @@
   background-color: var(--basic-neutral);
 }
 
-.main-container {
-  /* width: 1200px; */
+.page-container {
+  width: 1200px;
   margin: 0 auto;
   background-color: var(--basic-white);
+
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  box-shadow: 0px 5px 15px var(--special-shadow-color);
 }
+
+
 /* Header */
+
+.main-header {
+  display: grid;
+}
 
 .main-navigation {
   font-size: 14px;
   line-height: 26px;
   color: var(--basic-black);
+}
+
+.main-header-logo {
+  justify-self: center;
 }
 
 .site-navigation {
@@ -100,12 +139,27 @@
   color: var(--special-brown);
 }
 
+/* Main */
+
 .main-logo {
+  position: relative;
+  min-height: 509px;
   margin: 0;
   padding: 0;
+
   background-color: var(--special-brown);
   background-image: url("../img/bg.jpg");
-  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.main-logo::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1200px;
+  height: 57px;
+  background-image: url("../img/bottom-header-bg.svg");
   background-repeat: no-repeat;
 }
 
@@ -124,10 +178,14 @@
   text-align: center;
 }
 
-.main-feature-item {
+.main-feature-item-right {
   margin: 0;
   padding: 0;
   color: var(--basic-white);
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  min-height: 256px;
 }
 
 .main-feature-info {
@@ -151,12 +209,29 @@
 .local-features-list {
   margin: 0;
   list-style: none;
+  padding: 0 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 115px;
+  min-height: 330px;
 }
 
 .local-feature-title {
+  margin: 0;
+  padding: 0;
+  padding-top: 160px;
   font-weight: bold;
   font-size: 21px;
   line-height: 21px;
+  color: var(--basic-black);
+  text-align: center;
+}
+
+.local-feature-subtitle {
+  margin: 0;
+  padding: 0;
+  padding-top: 25px;
+  text-align: center;
 }
 
 .local-feature-house {
@@ -178,6 +253,16 @@
   background-repeat: no-repeat;
 }
 
+.main-feature-item-left {
+  margin: 0;
+  padding: 0;
+  color: var(--basic-white);
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  min-height: 256px;
+}
+
 .main-feature-image-left {
   background-color: var(--basic-extra-dark);
   background-image: url("../img/bridge.jpg");
@@ -187,9 +272,14 @@
 
 .main-features-list {
   margin: 0;
-  padding: 0;
   list-style: none;
+  padding: 0 70px;
   background-color: var(--basic-dark);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 110px;
+  min-height: 330px;
 }
 
 .main-feature-inline-item {
@@ -205,16 +295,20 @@
   color: var(--basic-black);
 }
 
+/* Search hotel */
+
 .search-hotel-title {
   font-weight: bold;
   font-size: 30px;
   line-height: 24px;
+  text-align: center;
   color: var(--basic-black);
 }
 
 .search-hotel-subtitle {
   font-size: 14px;
   line-height: 24px;
+  text-align: center;
 }
 
 .search-hotel-button {
@@ -235,7 +329,17 @@
 /* Footer */
 
 .main-footer {
+  padding: 0 90px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  min-height: 256px;
+
   background-color: var(--footer-fill);
+}
+
+.footer-contacts {
+  margin: 0;
 }
 
 .footer-tag {
@@ -256,6 +360,11 @@
 .footer-phone-link {
   text-decoration: none;
   color: var(--basic-black);
+}
+
+.footer-social {
+  width: 150px;
+  justify-self: center;
 }
 
 .footer-social-list {
