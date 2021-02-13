@@ -85,14 +85,13 @@
 }
 
 .page-container {
-  width: 1200px;
-  margin: 0 auto;
-  background-color: var(--basic-white);
-
-  min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
+  width: 1200px;
+  margin: 0 auto;
+  min-height: 100%;
+  background-color: var(--basic-white);
   box-shadow: 0px 5px 15px var(--special-shadow-color);
 }
 
@@ -146,7 +145,6 @@
   min-height: 509px;
   margin: 0;
   padding: 0;
-
   background-color: var(--special-brown);
   background-image: url("../img/bg.jpg");
   background-repeat: no-repeat;
@@ -179,13 +177,12 @@
 }
 
 .main-feature-item-right {
-  margin: 0;
-  padding: 0;
-  color: var(--basic-white);
-
   display: grid;
   grid-template-columns: 1fr 2fr;
   min-height: 256px;
+  margin: 0;
+  padding: 0;
+  color: var(--basic-white);
 }
 
 .main-feature-info {
@@ -207,19 +204,14 @@
 }
 
 .local-features-list {
-  margin: 0;
-  list-style: none;
-  padding: 0 60px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 115px;
   min-height: 330px;
+  margin: 0;
+  list-style: none;
 }
 
 .local-feature-title {
-  margin: 0;
-  padding: 0;
-  padding-top: 160px;
   font-weight: bold;
   font-size: 21px;
   line-height: 21px;
@@ -254,13 +246,12 @@
 }
 
 .main-feature-item-left {
-  margin: 0;
-  padding: 0;
-  color: var(--basic-white);
-
   display: grid;
   grid-template-columns: 2fr 1fr;
   min-height: 256px;
+  margin: 0;
+  padding: 0;
+  color: var(--basic-white);
 }
 
 .main-feature-image-left {
@@ -271,15 +262,12 @@
 }
 
 .main-features-list {
-  margin: 0;
-  list-style: none;
-  padding: 0 70px;
-  background-color: var(--basic-dark);
-
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 110px;
   min-height: 330px;
+  margin: 0;
+  list-style: none;
+  background-color: var(--basic-dark);
 }
 
 .main-feature-inline-item {
@@ -296,6 +284,11 @@
 }
 
 /* Search hotel */
+
+.search-results-sort-wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
 
 .search-hotel-title {
   font-weight: bold;
@@ -329,12 +322,9 @@
 /* Footer */
 
 .main-footer {
-  padding: 0 90px;
-
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   min-height: 256px;
-
   background-color: var(--footer-fill);
 }
 
