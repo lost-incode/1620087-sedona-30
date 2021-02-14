@@ -285,11 +285,6 @@
 
 /* Search hotel */
 
-.search-results-sort-wrapper {
-  display: grid;
-  grid-template-columns: 1fr auto;
-}
-
 .search-hotel-title {
   font-weight: bold;
   font-size: 30px;
@@ -409,6 +404,11 @@
 
 /* Catalog */
 
+.catalog-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+}
+
 .catalog-search-parameters {
   color: var(--basic-white);
   background-color: var(--special-blue);
@@ -430,11 +430,21 @@
   list-style: none;
 }
 
+.catalog-search-results-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
 .button-show-results {
   color: var(--basic-white);
   background-color: transparent;
   border: 2px solid var(--basic-white);
   border-radius: 2px;
+}
+
+.search-results-sort-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
 }
 
 .search-results-count {
