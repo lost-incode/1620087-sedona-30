@@ -85,6 +85,7 @@
 }
 
 .page-container {
+  position: relative;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
@@ -99,7 +100,7 @@
 /* Header */
 
 .main-header {
-  display: grid;
+  position: relative;
 }
 
 .main-navigation {
@@ -109,44 +110,47 @@
 }
 
 .main-header-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
   margin: 0;
   padding: 0;
-  justify-self: center;
-  z-index: 2;
 }
 
 .site-navigation {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 230px 230px 1fr 230px 230px;
   grid-template-areas:
     "li-1 li-2 . li-3 li-4";
-  max-height: 56px;
+  min-height: 56px;
   margin: 0;
-  margin-top: -76px;
-  padding: 0;
+  padding: 0 72px;
   list-style: none;
+}
+.site-navigation li {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .site-navigation li {
   grid-area: li-1;
-  margin: 15px 0;
-  padding: 0;
-  padding-left: 72px;
 }
 
 .site-navigation li:nth-child(2) {
   grid-area: li-2;
-  padding-left: 72px;
 }
 
 .site-navigation li:nth-child(3) {
   grid-area: li-3;
-  padding-right: 72px;
+  justify-content: flex-end;
 }
 
 .site-navigation li:nth-child(4) {
   grid-area: li-4;
-  padding-right: 72px;
+  justify-content: flex-end;
 }
 
 .site-navigation a {
@@ -178,7 +182,6 @@
   position: relative;
   min-height: 509px;
   margin: 0;
-  margin-top: -20px;
   padding: 0;
   background-color: var(--special-brown);
   background-image: url("../img/bg.jpg");
@@ -216,7 +219,6 @@
   margin-bottom: 51px;
   padding: 0;
   text-align: center;
-  max-width: 519px;
   font-size: 14px;
   line-height: 26px;
   color: var(--basic-extra-dark);
@@ -233,23 +235,30 @@
 
 .main-feature-info {
   display: flex;
+  margin: 0;
+  padding: 0 49px;
   flex-direction: column;
-  justify-content: center;
   text-align: center;
   background-color: var(--special-blue);
 }
 
 .main-feature-title {
-  align-self: center;
+  margin: 0;
+  margin-top: 47px;
+  padding: 0;
   font-weight: bold;
-  max-width: 301px;
   font-size: 21px;
   line-height: 21px;
 }
 
+.main-feature-count {
+  margin-top: 25px;
+  margin-bottom: 23px;
+}
+
 .main-feature-subtitle {
-  align-self: center;
-  max-width: 297px;
+  margin: 0;
+  padding: 0;
 }
 
 .main-feature-image-right {
@@ -264,6 +273,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -278,8 +288,8 @@
 }
 
 .local-feature-title {
-  /* margin-top: 160px; */
   margin: 0;
+  padding: 0;
   font-weight: bold;
   font-size: 21px;
   line-height: 21px;
@@ -336,6 +346,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   min-height: 256px;
   margin: 0;
+  padding: 0;
   list-style: none;
   background-color: var(--basic-dark);
 }
@@ -343,28 +354,34 @@
 .main-feature-inline-item {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   text-align: center;
   margin: 0;
-  padding: 0;
+  padding: 0 71px;
+  padding-top: 47px;
   background-color: var(--basic-dark);
 }
 
 .main-feature-caption {
-  align-self: center;
-  max-width: 300px;
+  margin: 0;
+  padding: 0;
   font-weight: bold;
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
 }
 
-/* Search hotel */
+.search-hotel {
+  margin: 0;
+  padding: 0;
+}
 
 .search-hotel-description {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  /* min-height: 291px; */
+  text-align: center;
 }
 
 .search-hotel-title {
@@ -375,7 +392,6 @@
   font-weight: bold;
   font-size: 30px;
   line-height: 24px;
-  text-align: center;
   color: var(--basic-black);
 }
 
@@ -384,17 +400,15 @@
   margin-bottom: 24px;
   padding-top: 24px;
   padding-bottom: 23px;
-  width: 435px;
   font-size: 14px;
   line-height: 24px;
-  text-align: center;
 }
 
 .search-hotel-button {
   margin: 0 auto;
   padding: 30px 24px;
   font-weight: bold;
-  min-width: 568px;
+  min-width: 520px;
   font-size: 21px;
   line-height: 26px;
   text-align: center;
@@ -412,27 +426,39 @@
   background-color: var(--special-active-brown);
 }
 
+.main-map {
+  margin: 0;
+}
+
 /* Footer */
 
 .main-footer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-top: -120px;
+  grid-template-columns: 327px 1fr 327px;
+  min-height: 120px;
+  padding: 0 73px;
   background-color: var(--footer-fill);
+}
+
+.main-footer-position {
+  width: 1054px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 
 .footer-contacts {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   justify-content: flex-end;
   text-align: center;
 }
 
 .footer-tag {
-  min-width: 166px;
   margin-bottom: 9px;
-  margin-right: 81px;
   text-decoration: none;
   font-weight: bold;
   font-size: 21px;
@@ -441,11 +467,9 @@
 }
 
 .footer-phone {
-  min-width: 251px;
-  margin: 0 auto;
-  padding: 0;
-  margin-right: 38px;
+  margin: 0;
   margin-bottom: 36px;
+  padding: 0;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
@@ -460,14 +484,15 @@
 .footer-social {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .footer-social-list {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   list-style: none;
-  margin-right: 125px;
+  margin: 0;
+  padding: 0;
 }
 
 .footer-social-item {
@@ -501,8 +526,7 @@
 .footer-copyright {
   display: flex;
   align-items: center;
-  justify-content: start;
-  margin-left: 65px;
+  justify-content: center;
 }
 
 .footer-copyright-title {
@@ -570,23 +594,45 @@
 
 .search-results-sort-wrapper {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 200px 1fr auto;
+  align-items: center;
+  min-height: 86px;
+  margin: 0;
+  padding: 0;
 }
 
 .search-results-count {
+  margin: 0;
+  padding: 0;
+  margin-left: 72px;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
   color: var(--basic-black);
 }
 
+.search-results-sort {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .search-results-sort-title {
+  margin-right: 40px;
+  margin-left: 46px;
   font-size: 12px;
   color: var(--basic-black);
 }
 
 .search-results-sort-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.search-results-sort-item:not(last-child) {
+  margin-right: 32px;
 }
 
 .search-results-sort-link {
@@ -609,6 +655,10 @@
 .search-results-sort-link .active {
   color: var(--special-blue);
   border: none;
+}
+
+.search-results-arrow {
+  margin-right: 73px;
 }
 
 .arrow {
