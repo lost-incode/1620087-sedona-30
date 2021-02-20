@@ -275,7 +275,8 @@
   flex-direction: column;
   padding-top: 160px;
   padding-bottom: 10px;
-  min-height: 160px;
+  min-height: 330px;
+  box-sizing: border-box;
 }
 
 .local-feature-title {
@@ -563,7 +564,6 @@
 .catalog-form {
   display: grid;
   grid-template-columns: 254px 274px 1fr;
-  /* min-height: 217px; */
   margin: 0;
   padding-top: 26.5px;
   padding-left: 72px;
