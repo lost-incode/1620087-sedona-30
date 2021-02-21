@@ -120,7 +120,7 @@
 
 .site-navigation {
   display: grid;
-  grid-template-columns: 230px 230px 1fr 230px 230px;
+  grid-template-columns: 228px 228px 1fr 228px 228px;
   grid-template-areas:
     "li-1 li-2 . li-3 li-4";
   min-height: 56px;
@@ -133,7 +133,7 @@
   align-items: center;
 }
 
-.site-navigation li {
+.site-navigation li:first-child {
   grid-area: li-1;
 }
 
@@ -870,3 +870,4 @@
   height: 1px;
   margin: -1px;
 }
+
