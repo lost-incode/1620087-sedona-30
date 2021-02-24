@@ -548,10 +548,11 @@
 
 .modal-count-inputs-adults {
   width: 226px;
+  margin-right: 53px;
 }
 
 .modal-count-inputs-kids {
-  width: 179px;
+  flex-grow: 1;
 }
 
 .search-input-count-wrapper {
@@ -941,11 +942,20 @@
 }
 
 .button-show-results {
+  min-width: 137px;
+  padding: 0 20px;
+  padding-top: 7px;
+  padding-bottom: 8px;
   margin-right: 95px;
+  font-family: inherit;
+  text-transform: inherit;
+  font-size: 14px;
+  line-height: 21px;
   color: var(--basic-white);
   background-color: transparent;
   border: 2px solid var(--basic-white);
   border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .search-results-sort-wrapper {
