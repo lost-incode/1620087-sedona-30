@@ -498,9 +498,8 @@
 }
 
 .modal-search-input:focus {
-  background-color: var(--basic-neutral);
+  background-color: var(--basic-white);
   border: 2px solid var(--basic-active-border);
-  /* outline: -2px solid var(--basic-active-border); */
 }
 
 .search-button {
@@ -510,7 +509,7 @@
 }
 
 .search-button-minus {
-  padding: 16px 14px 17px 11px;
+  padding: 16px 14px 17px 13px;
   box-sizing: border-box;
   background-color: var(--basic-neutral);
 }
@@ -545,11 +544,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 229px;
 }
 
 .modal-count-inputs-adults {
-  width: 229px;
+  width: 226px;
 }
 
 .modal-count-inputs-kids {
@@ -569,16 +567,14 @@
 }
 
 .modal-search-button {
-  margin: 0 auto;
   margin-top: 24px;
   padding: 16px 24px;
-  min-width: 458px;
+  width: 100%;
   font-family: inherit;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
-  /* line-height: 26px; */
   text-align: center;
   color: var(--basic-white);
   border: none;
@@ -663,16 +659,14 @@
 }
 
 .footer-social-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 46px;
   height: 48px;
   background-color: var(--special-blue);
+  box-sizing: border-box;
 }
 
 .footer-social-item:not(:last-child) {
-  margin-right: 5px;
+  margin-right: 6px;
 }
 
 .footer-social-item:hover {
@@ -687,10 +681,26 @@
   fill: var(--special-active-white);
 }
 
+.social-tw {
+  margin: 15px 14px;
+  width: 18px;
+  height: 18px;
+}
+
+.social-fb {
+  margin: 13px 17px;
+  width: 12px;
+  height: 22px;
+}
+
+.social-youtube {
+  margin: 16px 13px;
+  width: 20px;
+  height: 16px;
+}
+
 .social-svg {
   fill: var(--basic-white);
-  width: 17px;
-  height: 17px;
 }
 
 .footer-copyright {
@@ -767,6 +777,38 @@
   list-style: none;
 }
 
+.form-list-item label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  margin-left: 40px;
+}
+
+.form-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -39px;
+  top: 0;
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/catalog/checkbox-off.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.form-input-checkbox:checked + label::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: 0;
+  width: 27px;
+  height: 23px;
+  background-image: url("../img/catalog/checkbox-on.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
 .form-list li:not(:last-child) {
   margin-bottom: 25px;
 }
@@ -802,6 +844,100 @@
   font-size: 16px;
   line-height: 21px;
   text-align: center;
+  padding-left: 75px;
+}
+
+.range-filter {
+  width: 317px;
+  margin-top: 10.5px;
+}
+
+.price-controls {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding-left: 68px;
+  padding-bottom: 2px;
+  width: 317px;
+  min-height: 36px;
+  border: 2px solid var(--basic-white);
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.price-controls::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2px;
+  height: 22px;
+  background-color: var(--basic-white);
+}
+
+.max-price {
+  text-align: right;
+}
+
+.price-controls input {
+  max-width: 80px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 21px;
+  background-color: transparent;
+  border: none;
+  color: var(--basic-white);
+}
+
+.price-controls input:hover,
+.price-controls input:focus {
+  border: none;
+  outline: none;
+}
+
+.range-controls {
+  position: relative;
+  height: 21px;
+  margin-top: 20px;
+  margin-bottom: 23px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  /* width: 316px; */
+  background: var(--special-active-white);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: var(--basic-white);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0, -50%);
+  width: 3.8px;
+  height: 3.8px;
+  padding: 0;
+  border: 7.6px solid var(--basic-white);
+  background-color: var(--special-light-gray);
+  border-radius: 50%;
+  box-shadow: 0 2px 0 0 var(--special-light-shadow);
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 0;
+}
+
+.range-controls .toggle-max {
+  left: 255px;
 }
 
 .button-show-results {
