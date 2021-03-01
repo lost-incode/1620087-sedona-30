@@ -6,7 +6,6 @@
     <title>HTML Academy: Седона</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <!-- <link href="css/catalog.css" rel="stylesheet"> -->
 
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -25,7 +24,7 @@
                 <li><a href="#">Информация</a></li>
                 <li><a href="#">Фото и видео</a></li>
                 <li><a href="#">Карта штата</a></li>
-                <li><a>Гостиницы</a></li>
+                <li class="active"><a>Гостиницы</a></li>
             </ul>
         </nav>
     </header>
@@ -55,7 +54,7 @@
                 </fieldset>
                 <fieldset class="form-housing">
                     <legend class="catalog-form-legend">Тип жилья:</legend>
-                    <ul class="form-list">
+                    <ul class="form-list form-housing-list">
                         <li class="form-list-item">
                             <input class="visually-hidden form-input-checkbox" type="checkbox" name="filter-housing-hotel" id="filter-housing-hotel" checked>
                             <label for="filter-housing-hotel">Гостиница</label>
@@ -63,7 +62,7 @@
                         <li class="form-list-item">
                             <input class="visually-hidden form-input-checkbox" type="checkbox" name="filter-housing-motel" id="filter-housing-motel" checked>
                             <label for="filter-housing-motel">Мотель</label>
-                        </li class="form-list-item">
+                        </li>
                         <li class="form-list-item">
                             <input class="visually-hidden form-input-checkbox" type="checkbox" name="filter-housing-apartments" id="filter-housing-apartments"
                                 checked>
@@ -75,8 +74,8 @@
                     <legend class="catalog-form-cost-legend">Стоимость в сутки (Р):</legend>
                     <div class="range-filter">
                       <div class="price-controls">
-                        <label class="min-price">От<input type="text" name="min-cost" value="0"></label>
-                        <label class="max-price">До<input type="text" name="max-cost" value="3000"></label>
+                        <label class="min-price">От<input type="text" size="4" name="min-cost" value="0"></label>
+                        <label class="max-price">До<input type="text" size="4" name="max-cost" value="3000"></label>
                       </div>
                       <div class="range-controls">
                         <div class="scale">
@@ -214,16 +213,19 @@
             <a class="social-button" href="#">
               <span class="visually-hidden">Twitter</span>
               <svg class="social-tw" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="social-svg" d="M11.95 2.14409C13.635 1.64809 14.934 2.41409 15.527 3.32309C16.2 3.09209 16.858 2.84209 17.538 2.61509C17.5249 3.30145 17.2117 3.94761 16.681 4.38309C17.366 4.55309 17.985 3.89209 17.985 3.89209C17.816 4.89209 16.979 5.68009 16.422 5.91609C16.191 12.6661 13.247 17.1331 6.34498 16.9981H5.89898C5.48898 16.9981 1.73498 16.5381 1.00098 15.1111C3.27198 15.3071 4.89398 14.6891 5.69398 13.9341C4.73398 13.6341 3.01498 13.4571 2.71498 10.9841C3.06398 11.0901 3.27898 11.2121 3.90498 11.1031C2.70498 10.2471 1.37398 9.53009 1.44798 7.33009C1.73298 7.65809 2.51498 7.86609 2.78798 7.80209C2.08498 7.56109 0.817977 4.44209 1.89398 2.85009C3.71198 4.70409 5.62898 6.45609 9.04598 6.62309C9.25398 4.33009 10.183 2.79309 11.95 2.14409Z" fill="white"/></svg>
+            </a>
           </li>
           <li class="footer-social-item">
             <a class="social-button" href="#">
               <span class="visually-hidden">Facebook</span>
-              <svg class="social-fb" width="12" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="social-svg" d="M12 4V0H8a4 4 0 00-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" fill="#fff"/></svg></a>
+              <svg class="social-fb" width="12" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="social-svg" d="M12 4V0H8a4 4 0 00-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" fill="#fff"/></svg>
+            </a>
           </li>
           <li class="footer-social-item">
             <a class="social-button" href="#">
               <span class="visually-hidden">Youtube</span>
-              <svg class="social-youtube" width="20" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="social-svg" fill-rule="evenodd" clip-rule="evenodd" d="M3 0h14a3 3 0 013 3v10a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm3 4v8l9-4-9-4z" fill="#fff"/></svg></a>
+              <svg class="social-youtube" width="20" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="social-svg" fill-rule="evenodd" clip-rule="evenodd" d="M3 0h14a3 3 0 013 3v10a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm3 4v8l9-4-9-4z" fill="#fff"/></svg>
+            </a>
           </li>
         </ul>
       </section>
