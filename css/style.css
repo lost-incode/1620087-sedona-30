@@ -514,7 +514,6 @@
 .search-button {
   line-height: 0px;
   border: none;
-  outline: none;
 }
 
 .search-button-minus {
@@ -540,13 +539,11 @@
 .search-button:hover .search-button-path {
   fill: var(--basic-black);
   border: none;
-  outline: none;
 }
 
 .search-button:active .search-button-path {
   fill: var(--special-blue);
   border: none;
-  outline: none;
 }
 
 .modal-count-inputs {
@@ -588,7 +585,6 @@
   text-align: center;
   color: var(--basic-white);
   border: none;
-  outline: none;
   background-color: var(--special-blue);
   box-sizing: border-box;
 }
