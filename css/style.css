@@ -534,6 +534,20 @@
   right: 9px;
   top: 7px;
   padding: 0;
+  border: none;
+}
+
+.search-button:focus {
+  right: 7px;
+  top: 5px;
+  outline: none;
+  border: 2px solid var(--special-active-blue);
+  border-radius: 5px;
+}
+
+.search-button .search-button-path {
+  width: 21px;
+  height: 23px;
 }
 
 .search-button:hover .search-button-path {
@@ -797,6 +811,10 @@
   user-select: none;
   padding-left: 40px;
   box-sizing: border-box;
+}
+
+.form-input-checkbox:focus + label {
+  outline: thin dotted;
 }
 
 .form-input-checkbox + label::before {
