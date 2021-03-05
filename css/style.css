@@ -420,6 +420,7 @@
 }
 
 .search-hotel-button {
+  z-index: 2;
   margin: 0 auto;
   padding: 30px 24px;
   font-weight: bold;
@@ -445,6 +446,7 @@
 /* Main form */
 
 .modal-search-hotel {
+  display: block;
   position: absolute;
   left: 50%;
   top: 100%;
@@ -456,6 +458,11 @@
   z-index: 1;
   background-color: var(--basic-white);
   box-shadow: 0px 7px 15px var(--special-form-shadow);
+  animation: appearance 0.6s;
+}
+
+.modal-search-none {
+  display: none;
 }
 
 .modal-search-row {
@@ -1254,4 +1261,16 @@
   padding: 3px 12px 3px 15px;
   color: var(--special-rating-text);
   background-color: var(--basic-neutral);
+}
+
+/* Animations */
+
+@keyframes appearance {
+  0% {
+    transform: translate(-50%, -100px);
+  }
+
+  100% {
+    transform: translate(-50%, 0);
+  }
 }
