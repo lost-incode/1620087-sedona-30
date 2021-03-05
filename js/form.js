@@ -4,7 +4,7 @@ const startDate = form.querySelector("#search-start-date");
 const adults = form.querySelector("#search-adults-count");
 const kids = form.querySelector("#search-kids-count");
 
-form.classList.add("modal-search-none");
+form.classList.add("visually-none");
 
 let isStorageSupport = true;
 let storageAdults = "";
@@ -19,7 +19,7 @@ try {
 
 formLink.addEventListener("click", function (evt) {
   evt.preventDefault();
-  form.classList.toggle("modal-search-none");
+  form.classList.toggle("visually-none");
 
   if (storageAdults) {
     adults.value = storageAdults;
