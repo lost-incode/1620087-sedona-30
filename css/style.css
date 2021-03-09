@@ -1224,6 +1224,10 @@
   background-repeat: repeat-x;
 }
 
+.stars-one {
+  width: 24px;
+}
+
 .stars-two {
   width: 48px;
 }
@@ -1234,6 +1238,10 @@
 
 .stars-four {
   width: 96px;
+}
+
+.stars-five {
+  width: 120px;
 }
 
 .rating-title {
